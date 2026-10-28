@@ -189,11 +189,36 @@
     submitBtn.textContent = 'Sending…';
     setStatus('Sending your enquiry…', '');
 
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(function (res) {
+    
+fetch(form.action, {
+  method: 'POST',
+  body: data,
+  headers: { 'Accept': 'application/json' }
+})
+.then(function (res) {
+  return res.json().then(function (body) {
+    console.log('Formspree HTTP status:', res.status);
+    console.log('Formspree response:', body);
+
+    if (res.ok) {
+      setStatus('Enquiry sent successfully!', 'ok');
+      form.reset();
+    } else {
+      setStatus(
+        'Form error (' + res.status + '): ' +
+        (body.errors ? body.errors.map(function (e) {
+          return e.message;
+        }).join(', ') : 'Please check your Formspree form settings.'),
+        'error'
+      );
+    }
+  });
+})
+.catch(function (err) {
+  console.error('Form submission error:', err);
+  setStatus('Network or JavaScript error. Please try again.', 'error');
+});
+
       if (res.ok) {
         form.reset();
         setStatus('Thank you. Your enquiry has been sent. I’ll review it and reply to you personally.', 'ok');
