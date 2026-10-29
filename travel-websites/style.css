@@ -38,6 +38,7 @@ padding-bottom:env(safe-area-inset-bottom,0px);
 .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;max-width:none;padding:72px max(40px,calc((100% - 1100px)/2));background:radial-gradient(900px 400px at 85% 10%,#1d4a5c66,transparent),var(--navy);color:#fff}
 .hero h1{font-size:clamp(34px,5vw,54px)}.hero h1 em{color:var(--teal);font-style:normal}
 .note{font-size:13px;color:var(--muted);margin-top:16px}
+  .hero > img{width:100%;height:auto;border-radius:12px;box-shadow:0 24px 50px #0008}
 .browser{background:#fff;border-radius:12px;box-shadow:0 24px 50px #0008;overflow:hidden;color:var(--ink)}
 .bchrome{display:flex;gap:6px;padding:9px 12px;background:#e7ebf0}.bchrome i{width:9px;height:9px;border-radius:50%;background:#b9c2cc}
 .bimg{aspect-ratio:16/8;background:linear-gradient(180deg,#f6c177,#f08a5d 30%,#2b6f8a 55%,#0f3d52);position:relative}
