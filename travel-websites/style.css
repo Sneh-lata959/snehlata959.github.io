@@ -200,9 +200,9 @@ details p{padding:0 0 14px;color:var(--soft);line-height:1.65;font-size:15px}
 }
 /* About profile image size */
 .travel-landing .about .av {
-  width: 150px !important;
-  max-width: 150px !important;
-  height: 150px !important;
+  width: 200px !important;
+  max-width: 200px !important;
+  height: 200px !important;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   justify-self: start;
