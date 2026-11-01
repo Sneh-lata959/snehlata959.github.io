@@ -170,3 +170,22 @@ details p{padding:0 0 14px;color:var(--soft);line-height:1.65;font-size:15px}
   .travel-landing *,.travel-landing *::before,.travel-landing *::after{transition:none!important;animation:none!important}
   .travel-landing.js .reveal{opacity:1;transform:none}
 }
+/* ===== Fixes: slider, hero banner, project images ===== */
+.travel-landing .hero > *,
+.travel-landing .concept > *,
+.travel-landing .pg > *,
+.travel-landing .about > *{min-width:0}
+
+.travel-landing .slider{position:relative;width:100%;min-width:0;max-width:100%}
+.travel-landing .track{display:flex;width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory}
+.travel-landing .slide{flex:0 0 100%;width:100%;min-width:100%;aspect-ratio:16/10;overflow:hidden;position:relative}
+.travel-landing .slide img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;display:block}
+.travel-landing .slide:nth-child(2) img{object-fit:contain;background:#101C2C}
+.travel-landing .sl-btn{z-index:5}
+
+.travel-landing .pj .im{overflow:hidden}
+.travel-landing .pj .im img{display:block;width:100%;height:100%;object-fit:cover}
+
+.travel-landing .hero{grid-template-columns:1fr}
+.travel-landing .hero-text{max-width:720px}
+.travel-landing .hero > img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1800/650;object-fit:cover;border-radius:12px;box-shadow:0 24px 50px #0008}
