@@ -186,7 +186,11 @@ details p{padding:0 0 14px;color:var(--soft);line-height:1.65;font-size:15px}
 .travel-landing .pj .im{overflow:hidden}
 .travel-landing .pj .im img{display:block;width:100%;height:100%;object-fit:cover}
 
-.travel-landing .hero{grid-template-columns:1fr}
+.travel-landing .hero {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
 .travel-landing .hero-text{max-width:720px}
 .travel-landing .hero > img {
   display: block;
